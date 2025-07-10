@@ -1,0 +1,20 @@
+version: '3.9'
+
+services:
+  database_service:
+    build: ./backend/database
+    container_name: database_service
+    ports:
+      - "5001:5000"
+
+  students_service:
+    build: ./backend/students
+    container_name: students_service
+    ports:
+      - "5002:5000"
+
+  universities_service:
+    build: ./backend/universities
+    container_name: universities_service
+    ports:
+      - "5003:5000"
